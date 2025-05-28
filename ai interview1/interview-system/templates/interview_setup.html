@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Setup - AI Interview System</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/interview-setup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="setup-container">
+            <header class="setup-header">
+                <h1>Interview Setup</h1>
+                <p class="subtitle">Please enable the following permissions to begin your interview</p>
+            </header>
+
+            <div class="setup-grid">
+                <div class="setup-card camera-card">
+                    <div class="card-header">
+                        <h2>Camera Access</h2>
+                        <span id="cameraStatus" class="status-badge pending">Pending</span>
+                    </div>
+                    <div class="preview-container">
+                        <video id="cameraPreview" autoplay playsinline></video>
+                        <div class="face-guide"></div>
+                    </div>
+                    <button id="cameraBtn" class="setup-btn">Enable Camera</button>
+                </div>
+
+                <div class="setup-card mic-card">
+                    <div class="card-header">
+                        <h2>Microphone Access</h2>
+                        <span id="micStatus" class="status-badge pending">Pending</span>
+                    </div>
+                    <div class="audio-visualizer">
+                        <div id="audioLevel" class="audio-level"></div>
+                    </div>
+                    <button id="micBtn" class="setup-btn">Enable Microphone</button>
+                </div>
+
+                <div class="setup-card screen-card">
+                    <div class="card-header">
+                        <h2>Screen Sharing</h2>
+                        <span id="screenStatus" class="status-badge pending">Pending</span>
+                    </div>
+                    <div class="preview-container">
+                        <video id="screenPreview" autoplay playsinline></video>
+                    </div>
+                    <button id="screenBtn" class="setup-btn">Share Screen</button>
+                </div>
+            </div>
+
+            <div class="setup-footer">
+                <button type="button" class="back-btn" onclick="window.location.href='candidate-form.html'">Back to Registration</button>
+                <button id="startInterviewBtn" class="start-btn" disabled>Start Interview</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/interview-setup.js"></script>
+</body>
+</html>
