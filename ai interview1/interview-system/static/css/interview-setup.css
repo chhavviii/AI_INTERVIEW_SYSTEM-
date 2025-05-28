@@ -1,0 +1,199 @@
+.setup-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.setup-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.setup-header h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.setup-header .subtitle {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+.setup-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.setup-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.card-header h2 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.status-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.status-badge.pending {
+    background: #ffeeba;
+    color: #856404;
+}
+
+.status-badge.granted {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-badge.denied {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.preview-container {
+    width: 100%;
+    height: 200px;
+    background: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.preview-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.face-guide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    border: 3px dashed #28a745;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.audio-visualizer {
+    width: 100%;
+    height: 200px;
+    background: #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.audio-level {
+    width: 0%;
+    height: 30px;
+    background: #28a745;
+    border-radius: 15px;
+    transition: width 0.1s ease;
+}
+
+.setup-btn {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: #3498db;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.setup-btn:hover:not(:disabled) {
+    background: #2980b9;
+}
+
+.setup-btn:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.setup-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.back-btn, .start-btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-btn {
+    background: #ecf0f1;
+    color: #2c3e50;
+}
+
+.back-btn:hover {
+    background: #bdc3c7;
+}
+
+.start-btn {
+    background: #28a745;
+    color: white;
+}
+
+.start-btn:hover:not(:disabled) {
+    background: #218838;
+}
+
+.start-btn:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .setup-container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .setup-header h1 {
+        font-size: 2rem;
+    }
+
+    .setup-footer {
+        flex-direction: column;
+    }
+
+    .back-btn, .start-btn {
+        width: 100%;
+    }
+}

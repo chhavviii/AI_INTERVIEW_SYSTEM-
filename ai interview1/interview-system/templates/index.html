@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Guidelines - AI Interview System</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/guidelines.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="guidelines-container">
+        <header class="header">
+            <h1>Welcome to AI-Powered Interview System</h1>
+            <p class="subtitle">Please read the following guidelines carefully before proceeding</p>
+        </header>
+
+        <main class="guidelines-content">
+            <section class="guidelines-section">
+                <h2>Interview Process</h2>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Registration</h3>
+                            <p>Fill in your details and upload your resume</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Setup Check</h3>
+                            <p>Enable camera, microphone, and screen sharing</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Interview</h3>
+                            <p>Complete the AI-powered interview session</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="guidelines-section">
+                <h2>Requirements</h2>
+                <div class="requirements-grid">
+                    <div class="requirement-card">
+                        <img src="assets/icons/camera.svg" alt="Camera">
+                        <h3>Working Camera</h3>
+                        <p>Must have a functional webcam for face detection</p>
+                    </div>
+                    <div class="requirement-card">
+                        <img src="assets/icons/mic.svg" alt="Microphone">
+                        <h3>Working Microphone</h3>
+                        <p>Clear audio input device for voice responses</p>
+                    </div>
+                    <div class="requirement-card">
+                        <img src="assets/icons/screen.svg" alt="Screen">
+                        <h3>Screen Sharing</h3>
+                        <p>Ability to share your entire screen</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="guidelines-section">
+                <h2>Important Notes</h2>
+                <div class="notes-list">
+                    <div class="note-item">
+                        <span class="note-icon">📝</span>
+                        <p>Ensure you're in a quiet, well-lit environment</p>
+                    </div>
+                    <div class="note-item">
+                        <span class="note-icon">⏰</span>
+                        <p>The interview will take approximately 30 minutes</p>
+                    </div>
+                    <div class="note-item">
+                        <span class="note-icon">📱</span>
+                        <p>Turn off phone and other distractions</p>
+                    </div>
+                    <div class="note-item">
+                        <span class="note-icon">👔</span>
+                        <p>Dress professionally as in a regular interview</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="guidelines-footer">
+            <label class="checkbox-container">
+                <input type="checkbox" id="agreementCheckbox">
+                <span class="checkmark"></span>
+                I have read and understood all the guidelines
+            </label>
+            <button id="proceedBtn" class="proceed-btn" disabled>Proceed to Registration</button>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('agreementCheckbox').addEventListener('change', function() {
+            document.getElementById('proceedBtn').disabled = !this.checked;
+        });
+
+        document.getElementById('proceedBtn').addEventListener('click', function() {
+            window.location.href = 'candidate-form.html';
+        });
+    </script>
+</body>
+</html>
